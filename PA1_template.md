@@ -1,4 +1,10 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: 'Reproducible Research: Peer Assessment 1'
+output:
+  html_document:
+    fig_caption: yes
+    keep_md: yes
+---
 
 
 ## Loading and preprocessing the data
@@ -18,7 +24,7 @@ total_steps_per_day <- aggregate(steps ~ date, data, sum, na.rm = TRUE)
 hist(total_steps_per_day$steps, main = "Total steps per day", xlab = "daily steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-2-1.png) 
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png) 
 
 ```r
 mean(total_steps_per_day$steps)
@@ -55,7 +61,7 @@ plot(avg_steps_per_interval$interval, avg_steps_per_interval$steps,
      main = "Steps taken per 5-minute interval, averaged over all 53 days")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png) 
 
 ```r
 # Which 5-minute interval is most active, on average
@@ -116,7 +122,7 @@ median(new_total_steps_per_day$steps)
 hist(new_total_steps_per_day$steps, main = "Imputed NAS: Total steps per day", xlab = "daily steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png) 
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
 
 
 
@@ -155,4 +161,4 @@ print(myplot1, vp = viewport(layout.pos.row = 1, layout.pos.col = 1))
 print(myplot2, vp = viewport(layout.pos.row = 2, layout.pos.col = 1))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png) 
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png) 
